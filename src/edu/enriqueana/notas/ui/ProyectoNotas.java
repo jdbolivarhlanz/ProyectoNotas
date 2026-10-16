@@ -10,6 +10,7 @@ public class ProyectoNotas {
         System.out.println("Introduce la nota del 3º trimestre");
         int nota3 = new Scanner(System.in).nextInt();
         double nota = ModuloNotas.calcularMedia(nota1,nota2,nota3);
-        System.out.println("La nota media es: "+nota);
+        System.out.println("¿Dónde deseas ver el resultado? [1]Pantalla [2]Archivo");
+        int eleccionUsuario = new Scanner(System.in).nextInt();
     }
 }
