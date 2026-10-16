@@ -15,6 +15,14 @@ public class ProyectoNotas {
         double nota = ModuloNotas.calcularMedia(nota1,nota2,nota3);
         System.out.println("¿Dónde deseas ver el resultado? [1]Pantalla [2]Archivo");
         int eleccionUsuario = new Scanner(System.in).nextInt();
-
+        if(eleccionUsuario==2){
+            try{
+                PrintWriter pw = new PrintWriter("salida.txt");
+                pw.println("La nota media es: "+nota);
+                pw.close();
+            }catch (IOException error){
+                System.out.println("Error al escribir el archivo de salida: "+ error.getMessage());
+            }
+        }
     }
 }
