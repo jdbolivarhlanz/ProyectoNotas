@@ -17,6 +17,14 @@ public class ProyectoNotas {
         int eleccionUsuario = new Scanner(System.in).nextInt();
         if(eleccionUsuario==1){
             System.out.println("La nota media es: "+nota);
+        }else if(eleccionUsuario==2){
+            try{
+                PrintWriter pw = new PrintWriter("salida.txt");
+                pw.println("La nota media es: "+nota);
+                pw.close();
+            }catch (IOException error){
+                System.out.println("Error al escribir el archivo de salida: "+ error.getMessage());
+            }
         }
 
     }
